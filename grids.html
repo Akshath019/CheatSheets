@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Layout Website</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+/* NO GRID display WAS USED  */
+    .container {
+      display: grid;
+      grid-template-areas: 
+        "header header header"
+        "sidebar main ads"
+        "footer footer footer";
+      grid-template-columns: 200px 1fr 150px; /* sidebar, main, ads */
+      grid-template-rows: 80px 1fr 60px; /* header, content, footer */
+      height: 100vh;
+    }
+
+    header {
+      grid-area: header;
+      background: lightblue;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    aside {
+      grid-area: sidebar;
+      background: lightcoral;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    main {
+      grid-area: main;
+      background: lightgreen;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .ads {
+      grid-area: ads;
+      background: lightgoldenrodyellow;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    footer {
+      grid-area: footer;
+      background: lightgray;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+    }
+
+    .text{
+        margin: 20px;
+        background-color: rgb(132, 55, 199);
+        color: rgb(255, 255, 255);
+        padding: 20px;
+        border-radius: 6px;
+        font-size: large;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>Header</header>
+    <aside>Sidebar</aside>
+    <main>Main Content</main>
+    <div class="ads">Ads / Extra Info</div>
+    <footer>Footer</footer>
+  </div>
+
+
+
+<div class="text">
+  THE HTML CODE USED HERE:  
+  <pre><code>
+HTML: 
+&lt;div class="container"&gt;
+  &lt;header&gt;Header&lt;/header&gt;
+  &lt;aside&gt;Sidebar&lt;/aside&gt;
+  &lt;main&gt;Main Content&lt;/main&gt;
+  &lt;div class="ads"&gt;Ads / Extra Info&lt;/div&gt;
+  &lt;footer&gt;Footer&lt;/footer&gt;
+&lt;/div&gt;
+  </code></pre>
+  THE CSS CODE USED HERE :
+  </code></pre>
+  <pre><code>.container {
+  display: grid;
+  grid-template-areas: 
+    "header header header"
+    "sidebar main ads"
+    "footer footer footer";
+  grid-template-columns: 200px 1fr 150px; /* sidebar, main, ads */
+  grid-template-rows: 80px 1fr 60px;      /* header, content, footer */
+  height: 100vh;
+}</code></pre>
+</div>
+
+    
+
+  </div>
+</body>
+</html>
